@@ -1,0 +1,131 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  min-height: 100vh;
+  background: url(./download\ \(1\).jpg) no-repeat center center/cover;
+}
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  height: 80px;
+  width: 100%;
+  top: 20px;
+  border-radius: 60px;
+  background: transparent;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+  backdrop-filter: blur(10px);
+  z-index: 999;
+}
+.con{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 2rem;
+  max-width: 1600px;
+}
+.logo{
+  font-size: 2rem;
+  font-weight: 600;
+  color: rgb(19, 60, 96);
+  text-decoration: none;
+  cursor: grabbing;
+
+}
+.con .navbar-menu{
+  display: flex;
+  text-align: center;
+  gap: 1.5rem;
+  list-style: none;
+  
+}
+
+.con .navbar-menu li a {
+  text-decoration: none;
+  color: rgb(197, 76, 6);
+  font-size: 1.3rem;
+  font-weight: 900;
+  padding: 3px 10px;
+  border-radius: 20px;
+  border: 2px solid transparent;
+  transition: all0.7s ease;
+}
+.con .navbar-menu li a:hover,
+.con .navbar-menu li a.active{
+  color: rgba(0,0,0,0.8);
+  background: rgb(11, 163, 186);
+  border: 2px solid rgb(0, 0, 0);
+}
+.navbar-toggle{
+  display: none;
+  background: transparent;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+.bar{
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background: rgb(10, 13, 110);
+  transition: all 0.3 ease-in-out;
+}
+@media(max-width:880px){
+  .navbar{
+    backdrop-filter: none;
+  }
+  .con .navbar-menu{
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.7rem !important;
+    position: absolute;
+    height: 100vh;
+    width: 200px;
+    top: 20px;
+    right: 0px;
+    padding: 5rem 1.5rem;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+
+  }
+  .con .navbar-menu.active{
+    display: flex;
+  }
+  .navbar-toggle{
+    display: block;
+    z-index: 999;
+  }
+  .navbar-toggle.active .bar:nth-child(2){
+    opacity: 0;
+
+  }
+  .navbar-toggle.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+
+  }
+  .navbar-toggle.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+
+  }
+
+}
+@media(max-width: 480px){
+  .con {
+    padding: 0 1rem;
+  }
+  .logo{
+    font-size: 1.7rem;
+  }
+  con .navbar-menu li a{
+    font-size: 1.2rem;
+    padding: 3px 15px;
+    
+  }
+}
