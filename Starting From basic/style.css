@@ -40,7 +40,7 @@ body{
 .con .navbar-menu{
   display: flex;
   text-align: center;
-  gap: 1.5rem;
+  gap: 1.6rem;
   list-style: none;
   
 }

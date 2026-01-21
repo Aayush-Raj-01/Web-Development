@@ -5,3 +5,4 @@ nt.addEventListener('click' , () => {
     nt.classList.toggle('active');
     nm.classList.toggle('active');
 });
+// satisfies
