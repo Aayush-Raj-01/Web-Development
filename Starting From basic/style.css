@@ -1,3 +1,15 @@
+@font-face {
+    font-family: 'Bitfals';
+    src: url('fonts/BitfalsFont.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'TheAsesino';
+    src: url('fonts/TheAsesino.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 *{
   margin: 0;
   padding: 0;
@@ -5,21 +17,29 @@
 }
 body{
   min-height: 100vh;
-  background: url(./download\ \(1\).jpg) no-repeat center center/cover;
+  background: radial-gradient(#398790, #104857);
+  overflow-x: hidden;  
 }
 .navbar{
   display: flex;
   align-items: center;
   justify-content: center;
-  position: sticky;
+  position: fixed;
   height: 80px;
   width: 100%;
   top: 20px;
   border-radius: 60px;
-  background: transparent;
+  background: linear-gradient(60deg,rgb(23, 29, 32),rgb(5, 22, 33));
   box-shadow: 0 10px 20px rgba(0,0,0,0.5);
   backdrop-filter: blur(10px);
   z-index: 999;
+  transition: all 0.3s ease;
+}
+.navbar.sticky {
+  top: 0;
+  border-radius: 0; /* Remove border-radius when stuck */
+  background: rgba(0, 0, 0, 0.5); /* Solid background */
+  height: 60px;
 }
 .con{
   display: flex;
@@ -32,7 +52,7 @@ body{
 .logo{
   font-size: 2rem;
   font-weight: 600;
-  color: rgb(19, 60, 96);
+  color: rgb(234, 238, 241);
   text-decoration: none;
   cursor: grabbing;
 
@@ -47,7 +67,7 @@ body{
 
 .con .navbar-menu li a {
   text-decoration: none;
-  color: rgb(197, 76, 6);
+  color: rgb(222, 222, 222);
   font-size: 1.3rem;
   font-weight: 900;
   padding: 3px 10px;
@@ -58,7 +78,7 @@ body{
 .con .navbar-menu li a:hover,
 .con .navbar-menu li a.active{
   color: rgba(0,0,0,0.8);
-  background: rgb(11, 163, 186);
+  background: rgb(151, 151, 151);
   border: 2px solid rgb(0, 0, 0);
 }
 .navbar-toggle{
@@ -73,8 +93,46 @@ body{
   width: 25px;
   height: 3px;
   margin: 5px auto;
-  background: rgb(10, 13, 110);
+  background: rgb(231, 231, 231);
   transition: all 0.3 ease-in-out;
+}
+.conw{
+  text-align: center; /* Centers the inline-block child */
+}
+.heading{
+  margin: 200px 0 0 0px;
+  font-size: 8rem;
+   font-family: 'Bitfals', sans-serif;
+   color: #ffffff;
+   background: black;
+   padding: 10px;
+}
+.scroll-content{
+  margin: 20px 0 0 0;
+  font-size: 2.5rem;
+  white-space: nowrap;
+   font-family: 'TheAsesino', sans-serif;
+
+}
+
+.bodyin{
+  display: flex;
+  width: max-content;
+  animation: scroll 20s linear infinite;
+}
+.re{
+  margin-top: 200px;
+  font-size: 10rem;
+  font-weight: bolder;
+  
+}
+@keyframes scroll{
+  0%{
+    transform: translateX(0%);
+  }
+  100%{
+    transform: translateX(-50%);
+  }
 }
 @media(max-width:880px){
   .navbar{
