@@ -27,13 +27,13 @@ body{
   position: fixed;
   height: 80px;
   width: 100%;
-  top: 20px;
+  top: 40px;
   border-radius: 60px;
   background: linear-gradient(60deg,rgb(23, 29, 32),rgb(5, 22, 33));
   box-shadow: 0 10px 20px rgba(0,0,0,0.5);
   backdrop-filter: blur(10px);
   z-index: 999;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 .navbar.sticky {
   top: 0;
